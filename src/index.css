@@ -174,7 +174,7 @@
     @apply bg-gradient-to-br from-card to-secondary/30 rounded-xl p-8
            shadow-sm hover:shadow-elegant border border-border/30
            transform hover:scale-105 hover:-translate-y-2
-           transition-all duration-500 ease-out group;
+           transition-all duration-500 ease-out;
   }
   
   /* Section Containers */
