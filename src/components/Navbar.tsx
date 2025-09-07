@@ -51,7 +51,7 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-xl">C</span>
             </div>
-            <span className="text-2xl font-bold text-gradient">ConsultPro</span>
+            <span className="text-2xl font-bold text-accent">ConsultPro</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -60,7 +60,11 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className={`transition-colors duration-200 font-medium ${
+                  isScrolled 
+                    ? 'text-blue-800 hover:text-blue-600' 
+                    : 'text-white hover:text-primary'
+                }`}
               >
                 {item.name}
               </button>
@@ -103,7 +107,11 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-6 py-3 text-foreground hover:text-primary hover:bg-secondary/30 transition-all duration-200"
+                className={`block w-full text-left px-6 py-3 transition-all duration-200 ${
+                  isScrolled 
+                    ? 'text-blue-800 hover:text-blue-600 hover:bg-blue-50' 
+                    : 'text-white hover:text-primary hover:bg-secondary/30'
+                }`}
               >
                 {item.name}
               </button>
